@@ -1,0 +1,12 @@
+version: 2.1
+
+orbs: 
+  oxygen: cloudbeat/oxygen@0.0.2
+
+workflows:
+  oxygen_install-start-run-case:
+    jobs:
+      - oxygen/install-start-run-tests:
+          selenium-minor-version: "3.5"
+          selenium-patch-version: "3.5.3"
+          file: 'cases/wikipedia.js'
